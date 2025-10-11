@@ -1,10 +1,6 @@
 <h1>Hi there! I'm Argha</h1>
 <h3>Student batch 2024 from Bandung Institute of Technology, Indonesia, who's currently learning to become a full stack developer!</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=arghaarham&label=Profile%20views&color=0e75b6&style=flat" alt="arghaarham" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=arghaarham" alt="arghaarham" /></a> </p>
-
 Contact me at 📧 **arghawisesa@gmail.com**
 
 Learning something new everyday.
