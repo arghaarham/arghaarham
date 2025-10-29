@@ -1,29 +1,6 @@
 <h1>Hi there! I'm Argha!</h1>
 
-<style>
-  @keyframes neon-flicker {
-    0%, 100% {
-      color: #01e0ca;
-      text-shadow: 0 0 5px #01e0ca, 0 0 10px #01e0ca, 0 0 20px #01e0ca, 0 0 40px #01e0ca;
-    }
-    50% {
-      color: #fc439d;
-      text-shadow: 0 0 5px #fc439d, 0 0 10px #fc439d, 0 0 20px #fc439d, 0 0 40px #fc439d;
-    }
-  }
-
-  .neon-text {
-    font-family: 'Arial Black', sans-serif; /* Ganti dengan font pilihan Anda */
-    font-size: 2em; /* Sesuaikan ukuran font */
-    animation: neon-flicker 1.5s infinite alternate;
-  }
-</style>
-
-<p class="neon-text">Hello!</p>
-<p class="neon-text">I'm Argha</p>
-<p class="neon-text">Informatics Engineering Student</p>
-<p class="neon-text">From</p>
-<p class="neon-text">Bandung Institute of Technology</p>
+![Neon Header](https://raw.githubusercontent.com/arghaarham/arghaarham/main/neon-header.svg)
 
 # 💫 About Me:
 🎓 Currently a student at Bandung Institute of Technology, Informatics Engineering (Batch 2024)<br>🔭 I’m currently working on personal projects <br>🌱 I’m currently learning Web Development, especially becoming a Full Stack Developer<br>⚡ Learn something new everyday
