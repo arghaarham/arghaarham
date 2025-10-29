@@ -1,83 +1,82 @@
-<svg width="750" height="220" xmlns="http://www.w3.org/2000/svg">
+<svg width="700" height="220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Russo+One');
+    </style>
+  </defs>
+
   <style>
-    /* Impor font dari Google */
-    @import url('https://fonts.googleapis.com/css?family=Russo+One');
+    /* Animasi 1: Kedap-kedip Neon (dari percobaan pertama kita) */
+    @keyframes neon-flicker {
+      0%, 100% {
+        fill: #01e0ca;
+        text-shadow: 0 0 5px #01e0ca, 0 0 10px #01e0ca, 0 0 20px #01e0ca;
+      }
+      50% {
+        fill: #fc439d;
+        text-shadow: 0 0 5px #fc439d, 0 0 10px #fc439d, 0 0 20px #fc439d;
+      }
+    }
 
+    /* Animasi 2: Siklus Muncul-Hilang (Fade In/Out) */
+    /* Total durasi: 12.5 detik (2.5 detik per baris) */
+
+    @keyframes cycle-1 {
+      0%    { opacity: 0; }
+      4%    { opacity: 1; } /* Fade in (0.5s) */
+      16%   { opacity: 1; } /* Tahan (1.5s) */
+      20%   { opacity: 0; } /* Fade out (0.5s) */
+      100%  { opacity: 0; }
+    }
+
+    @keyframes cycle-2 {
+      0%, 20%  { opacity: 0; }
+      24%      { opacity: 1; }
+      36%      { opacity: 1; }
+      40%      { opacity: 0; }
+      100%     { opacity: 0; }
+    }
+
+    @keyframes cycle-3 {
+      0%, 40%  { opacity: 0; }
+      44%      { opacity: 1; }
+      56%      { opacity: 1; }
+      60%      { opacity: 0; }
+      100%     { opacity: 0; }
+    }
+
+    @keyframes cycle-4 {
+      0%, 60%  { opacity: 0; }
+      64%      { opacity: 1; }
+      76%      { opacity: 1; }
+      80%      { opacity: 0; }
+      100%     { opacity: 0; }
+    }
+
+    @keyframes cycle-5 {
+      0%, 80%  { opacity: 0; }
+      84%      { opacity: 1; }
+      96%      { opacity: 1; }
+      100%     { opacity: 0; }
+    }
+    
+    /* Style dasar untuk teks */
     .text {
-      /* Gunakan font yang tebal dan modern */
       font-family: 'Russo One', sans-serif;
-      font-size: 28px;
+      font-size: 30px;
       text-anchor: middle;
+      opacity: 0; /* Mulai dalam keadaan tersembunyi */
       
-      /* Properti untuk animasi "gambar" (stroke) */
-      stroke: #01e0ca; /* Warna stroke neon (biru) */
-      stroke-width: 1.5;
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      
-      /* Mulai dengan transparan */
-      fill: transparent;
-      
-      /* Efek glow untuk stroke */
-      filter: drop-shadow(0 0 3px #01e0ca);
-    }
-
-    /* Total durasi siklus animasi: 20 detik */
-    /* Masing-masing animasi akan berjalan 20 detik, tapi keyframes-nya diatur waktunya */
-
-    #line1 { animation: anim-line1 20s infinite; }
-    #line2 { animation: anim-line2 20s infinite; }
-    #line3 { animation: anim-line3 20s infinite; }
-    #line4 { animation: anim-line4 20s infinite; }
-    #line5 { animation: anim-line5 20s infinite; }
-    
-    /* Penjelasan Keyframes (misal, anim-line1):
-       - 0%:    Tersembunyi (stroke-dashoffset: 1000)
-       - 10%:   Selesai digambar (stroke-dashoffset: 0)
-       - 15%:   Diisi dengan warna neon (fill: #fc439d)
-       - 80%:   Tetap tampil
-       - 90%-100%: Menghilang (kembali transparan) untuk mengulang
-    */
-
-    @keyframes anim-line1 {
-      0% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      10% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      15% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-    }
-
-    @keyframes anim-line2 {
-      0%, 15% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      25% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      30% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      /* Gabungkan KEDUA animasi! */
+      /* 1. Animasi kedap-kedip neon */
+      /* 2. Animasi siklus muncul-hilang */
     }
     
-    @keyframes anim-line3 {
-      0%, 30% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      40% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      45% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-    }
-    
-    @keyframes anim-line4 {
-      0%, 45% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      55% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      60% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-    }
-    
-    @keyframes anim-line5 {
-      0%, 60% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      70% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-      75% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
-      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
-    }
+    #line1 { animation: neon-flicker 1.5s infinite alternate, cycle-1 12.5s infinite; }
+    #line2 { animation: neon-flicker 1.5s infinite alternate, cycle-2 12.5s infinite; }
+    #line3 { animation: neon-flicker 1.5s infinite alternate, cycle-3 12.5s infinite; }
+    #line4 { animation: neon-flicker 1.5s infinite alternate, cycle-4 12.5s infinite; }
+    #line5 { animation: neon-flicker 1.5s infinite alternate, cycle-5 12.5s infinite; }
 
   </style>
   
