@@ -1,32 +1,89 @@
-<svg width="650" height="240" xmlns="http://www.w3.org/2000/svg">
+<svg width="750" height="220" xmlns="http://www.w3.org/2000/svg">
   <style>
-    @keyframes neon-flicker {
-      0%, 100% {
-        /* Warna pertama */
-        fill: #01e0ca;
-        text-shadow: 0 0 6px #01e0ca, 0 0 15px #01e0ca, 0 0 25px #01e0ca;
-      }
-      50% {
-        /* Warna kedua */
-        fill: #fc439d;
-        text-shadow: 0 0 6px #fc439d, 0 0 15px #fc439d, 0 0 25px #fc439d;
-      }
+    /* Impor font dari Google */
+    @import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+    .text {
+      /* Gunakan font yang tebal dan modern */
+      font-family: 'Russo One', sans-serif;
+      font-size: 28px;
+      text-anchor: middle;
+      
+      /* Properti untuk animasi "gambar" (stroke) */
+      stroke: #01e0ca; /* Warna stroke neon (biru) */
+      stroke-width: 1.5;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      
+      /* Mulai dengan transparan */
+      fill: transparent;
+      
+      /* Efek glow untuk stroke */
+      filter: drop-shadow(0 0 3px #01e0ca);
     }
 
-    .neon-text {
-      /* Gunakan font yang tebal dan mudah dibaca */
-      font-family: 'Arial Black', 'Impact', sans-serif;
-      font-size: 30px;
-      /* Terapkan animasi */
-      animation: neon-flicker 1.5s infinite alternate;
-      /* Tengahkan teks */
-      text-anchor: middle;
+    /* Total durasi siklus animasi: 20 detik */
+    /* Masing-masing animasi akan berjalan 20 detik, tapi keyframes-nya diatur waktunya */
+
+    #line1 { animation: anim-line1 20s infinite; }
+    #line2 { animation: anim-line2 20s infinite; }
+    #line3 { animation: anim-line3 20s infinite; }
+    #line4 { animation: anim-line4 20s infinite; }
+    #line5 { animation: anim-line5 20s infinite; }
+    
+    /* Penjelasan Keyframes (misal, anim-line1):
+       - 0%:    Tersembunyi (stroke-dashoffset: 1000)
+       - 10%:   Selesai digambar (stroke-dashoffset: 0)
+       - 15%:   Diisi dengan warna neon (fill: #fc439d)
+       - 80%:   Tetap tampil
+       - 90%-100%: Menghilang (kembali transparan) untuk mengulang
+    */
+
+    @keyframes anim-line1 {
+      0% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      10% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      15% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
     }
+
+    @keyframes anim-line2 {
+      0%, 15% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      25% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      30% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+    }
+    
+    @keyframes anim-line3 {
+      0%, 30% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      40% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      45% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+    }
+    
+    @keyframes anim-line4 {
+      0%, 45% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      55% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      60% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+    }
+    
+    @keyframes anim-line5 {
+      0%, 60% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      70% { stroke-dashoffset: 0; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+      75% { fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      80% { stroke-dashoffset: 0; fill: #fc439d; filter: drop-shadow(0 0 5px #fc439d); }
+      90%, 100% { stroke-dashoffset: 1000; fill: transparent; filter: drop-shadow(0 0 3px #01e0ca); }
+    }
+
   </style>
   
-  <text class="neon-text" x="50%" y="40">Hello!</text>
-  <text class="neon-text" x="50%" y="80">I'm Argha</text>
-  <text class="neon-text" x="50%" y="120">Informatics Engineering Student</text>
-  <text class="neon-text" x="50%" y="160">From</text>
-  <text class="neon-text" x="50%" y="200">Bandung Institute of Technology</text>
+  <text id="line1" class="text" x="50%" y="40">Hello!</text>
+  <text id="line2" class="text" x="50%" y="80">I'm Argha</text>
+  <text id="line3" class="text" x="50%" y="120">Informatics Engineering Student</text>
+  <text id="line4" class="text" x="50%" y="160">From</text>
+  <text id="line5" class="text" x="50%" y="200">Bandung Institute of Technology</text>
 </svg>
