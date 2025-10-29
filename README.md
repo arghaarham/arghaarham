@@ -2,7 +2,7 @@
 
 ![Neon Header](https://raw.githubusercontent.com/arghaarham/arghaarham/main/neon-header.svg)
 
-# 💫 About Me:
+# 1️⃣ About Me:
 🎓 Currently a student at Bandung Institute of Technology, Informatics Engineering (Batch 2024)<br>🔭 I’m currently working on personal projects <br>🌱 I’m currently learning Web Development, especially becoming a Full Stack Developer<br>⚡ Learn something new everyday
 
 
