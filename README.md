@@ -1,7 +1,6 @@
 <h1>Hi there! I'm Argha!</h1>
 
-https://giffiles.alphacoders.com/223/223281.gif
-<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif](https://giffiles.alphacoders.com/223/223281.gif" width="40" />
+![Desk Setup GIF](https://giffiles.alphacoders.com/223/223281.gif)
 
 ![Neon Header](https://raw.githubusercontent.com/arghaarham/arghaarham/main/neon-header.svg)
 
