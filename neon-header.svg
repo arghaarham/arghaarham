@@ -1,0 +1,32 @@
+<svg width="650" height="240" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes neon-flicker {
+      0%, 100% {
+        /* Warna pertama */
+        fill: #01e0ca;
+        text-shadow: 0 0 6px #01e0ca, 0 0 15px #01e0ca, 0 0 25px #01e0ca;
+      }
+      50% {
+        /* Warna kedua */
+        fill: #fc439d;
+        text-shadow: 0 0 6px #fc439d, 0 0 15px #fc439d, 0 0 25px #fc439d;
+      }
+    }
+
+    .neon-text {
+      /* Gunakan font yang tebal dan mudah dibaca */
+      font-family: 'Arial Black', 'Impact', sans-serif;
+      font-size: 30px;
+      /* Terapkan animasi */
+      animation: neon-flicker 1.5s infinite alternate;
+      /* Tengahkan teks */
+      text-anchor: middle;
+    }
+  </style>
+  
+  <text class="neon-text" x="50%" y="40">Hello!</text>
+  <text class="neon-text" x="50%" y="80">I'm Argha</text>
+  <text class="neon-text" x="50%" y="120">Informatics Engineering Student</text>
+  <text class="neon-text" x="50%" y="160">From</text>
+  <text class="neon-text" x="50%" y="200">Bandung Institute of Technology</text>
+</svg>
